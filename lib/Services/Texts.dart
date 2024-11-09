@@ -30,25 +30,25 @@ class Texts {
     "Quality, Convenience, and Care – Right Here"
   ];
   List Logtext = [
-    "Welcome Back to Hassle-Free Health"
-        "Log In to Access Care at Your Fingertips"
-        "Your Trusted Pharmacy Awaits"
-        "Back to Health with Just One Tap"
-        "Log In for Personalized Pharmacy Support"
-        "Seamless Care Starts Here"
-        "Your Health Essentials, Just a Login Away"
-        "Welcome Back to Simple, Secure Health Access"
-        "Continue Your Path to Wellness"
-        "Your Health Journey Awaits – Log In"
-        "Log In and Get Back to What Matters"
-        "Access Your Health Records and Refills"
-        "Here for Your Health, Every Time You Log In"
-        "Reconnecting You to Wellness"
-        "Your Pharmacy, Always Ready – Log In Now"
-        "The App That Cares – Just One Tap Away"
-        "Access Care and Convenience, Anytime"
-        "Log In to a World of Health Resources"
-        "Here to Support Your Health Goals"
+    "Welcome Back to Hassle-Free Health",
+        "Log In to Access Care at Your Fingertips",
+        "Your Trusted Pharmacy Awaits",
+        "Back to Health with Just One Tap",
+        "Log In for Personalized Pharmacy Support",
+        "Seamless Care Starts Here",
+        "Your Health Essentials, Just a Login Away",
+        "Welcome Back to Simple, Secure Health Access",
+        "Continue Your Path to Wellness",
+        "Your Health Journey Awaits – Log In",
+        "Log In and Get Back to What Matters",
+        "Access Your Health Records and Refills",
+        "Here for Your Health, Every Time You Log In",
+        "Reconnecting You to Wellness",
+        "Your Pharmacy, Always Ready – Log In Now",
+        "The App That Cares – Just One Tap Away",
+        "Access Care and Convenience, Anytime",
+        "Log In to a World of Health Resources",
+        "Here to Support Your Health Goals",
         "Welcome Back to Your Personal Health Hub"
   ];
   String getRegRandomtext(int number) {
