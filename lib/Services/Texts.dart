@@ -7,7 +7,6 @@ class Texts {
   //final Random_Number =  Random();
   //Random_Number
 
-  int number = 0;
   List Regtext = [
     "Join Us in Simplifying Your Health Journey",
     "Sign Up for Effortless Health Access",
