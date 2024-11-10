@@ -72,7 +72,24 @@ class _MyWidgetState extends State<LoginScreen>
               hintText: 'Enter Your Password',
             ),
             onChanged: (value) {},
-          )
+          ),
+          SizedBox(
+            height: 15.0,
+          ),
+          Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(20.0),
+            child: MaterialButton(
+              onPressed: () {},
+              child: Text(
+                'Login',
+                style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue),
+              ),
+            ),
+          ),
         ],
       )),
     );

@@ -14,34 +14,34 @@ class WelcomeScreen extends StatefulWidget {
 
 class _WelcomeScreenState extends State<WelcomeScreen>
     with SingleTickerProviderStateMixin {
-  late AnimationController controller;
-  late Animation animation;
-  @override
-  void initState() {
-    controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 3));
+  // late AnimationController controller;
+  // late Animation animation;
+  // @override
+  // void initState() {
+  //   controller =
+  //       AnimationController(vsync: this, duration: Duration(seconds: 3));
 
-    animation = ColorTween(begin: Colors.lightBlueAccent, end: Colors.teal)
-        .animate(controller);
+  //   animation = ColorTween(begin: Colors.lightBlueAccent, end: Colors.teal)
+  //       .animate(controller);
 
-    controller.forward();
+  //   controller.forward();
 
-    controller.addListener(() {
-      setState(() {});
-    });
-    super.initState();
-  }
+  //   controller.addListener(() {
+  //     setState(() {});
+  //   });
+  //   super.initState();
+  // }
 
-  @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   controller.dispose();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: animation.value,
+        //backgroundColor: animation.value,
         body: SafeArea(
           child: Padding(
               padding: const EdgeInsets.only(top: 200.0, bottom: 32.0),
@@ -54,9 +54,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                         fontWeight: FontWeight.bold),
                     child: AnimatedTextKit(
                       animatedTexts: [
-                        TypewriterAnimatedText('YOUR HEALTH',
-                            speed: Duration(milliseconds: 500)),
-                        TypewriterAnimatedText('OUR PRIORITY',
+                        TypewriterAnimatedText('YOUR HEALTH IS OUR TOP PRIORITY',
                             speed: Duration(milliseconds: 500)),
                       ],
                       repeatForever: true,

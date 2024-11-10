@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:pharma/Screens/HomeScreen.dart';
 import 'package:pharma/Services/Texts.dart';
 import 'package:pharma/Constants.dart';
 import 'dart:math';
@@ -72,7 +73,26 @@ class _MyWidgetState extends State<RegisterScreen>
               hintText: 'Enter Your Password',
             ),
             onChanged: (value) {},
-          )
+          ),
+          SizedBox(
+            height: 15.0,
+          ),
+          Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(20.0),
+            child: MaterialButton(
+              onPressed: () {
+                Navigator.pushNamed(context,HomeScreen.id);
+              },
+              child: Text(
+                'REGISTER',
+                style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue),
+              ),
+            ),
+          ),
         ],
       )),
     );

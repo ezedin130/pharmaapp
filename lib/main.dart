@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pharma/Screens/LoginScreen.dart';
 import 'package:pharma/Screens/WelcomeScreen.dart';
 import 'package:pharma/Screens/RegisterScreen.dart';
+import 'Screens/HomeScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       routes: {
         WelcomeScreen.id: (context) => WelcomeScreen(),
         RegisterScreen.id: (context) => RegisterScreen(),
-        LoginScreen.id: (context) => LoginScreen()
+        LoginScreen.id: (context) => LoginScreen(),
+        HomeScreen.id: (context) => HomeScreen(),
       },
     );
   }
