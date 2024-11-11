@@ -55,9 +55,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - lib/Images/uppresc.png
-    - lib/Images/docsappointment.png
-    - lib/Images/healthcheckup.webp
+    - lib/Images/
 
   fonts:
     - family: AtomicAge

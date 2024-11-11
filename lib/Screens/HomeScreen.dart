@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:pharma/Constants.dart';
+import 'package:pharma/Widgets/ImageButton.dart';
+import 'package:pharma/Widgets/FooterCard.dart';
 
 class HomeScreen extends StatefulWidget {
   static final id = 'home';
@@ -15,159 +17,199 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 10.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Card(
-                margin: EdgeInsets.symmetric(
-                  horizontal: 10.0,
+        child: Column(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  top: 10.0,
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0), // Padding inside the card
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.search,
-                        color: Colors.blueGrey,
+                child: ListView(
+                  children: [
+                    Card(
+                      margin: EdgeInsets.symmetric(
+                        horizontal: 10.0,
                       ),
-                      SizedBox(
-                        width: 8.0,
-                      ),
-                      Expanded(
-                        child: TextField(
-                          decoration: textFieldDecoration.copyWith(
-                            hintText: 'Search Medicine and healthcare products',
-                          ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(
+                          8.0,
+                        ), // Padding inside the card
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.search,
+                              color: Colors.blueGrey,
+                            ),
+                            SizedBox(
+                              width: 8.0,
+                            ),
+                            Expanded(
+                              child: TextField(
+                                decoration: textFieldDecoration.copyWith(
+                                  hintText:
+                                      'Search Medicine and healthcare products',
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 16.0,
-              ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    ImageButtons(
-                      text: 'Upload prescription',
-                      imagetext: 'lib/Images/uppresc.png',
-                      width: 90.0,
                     ),
-                    ImageButtons(
-                      text: 'Doctor Appointment',
-                      imagetext: 'lib/Images/docsappointment.png',
-                      width: 90.0,
+                    SizedBox(
+                      height: 16.0,
                     ),
-                    ImageButtons(
-                      text: 'Health Checkup',
-                      imagetext: 'lib/Images/healthcheckup.webp',
-                      width: 90.0,
+                    Expanded(
+                      child: Row(
+                        children: [
+                          ImageButtons(
+                            text: 'Upload prescription',
+                            imagetext: 'lib/Images/uppresc.png',
+                          ),
+                          ImageButtons(
+                            text: 'Doctor Appointment',
+                            imagetext: 'lib/Images/docsappointment.png',
+                          ),
+                          ImageButtons(
+                            text: 'Health Checkup',
+                            imagetext: 'lib/Images/healthcheckup.webp',
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 16.0,
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Text(
+                            'OUR BEST SELLING ITEMS',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Row(
+                            children: [
+                            ImageButtons(
+                              text: 'Creatine',
+                              imagetext: 'lib/Images/1.jpg',
+                            ),
+                            ImageButtons(
+                              text: 'Vitamins',
+                              imagetext: 'lib/Images/2.webp',
+                            ),
+                            ImageButtons(
+                              text: 'Omega 3',
+                              imagetext: 'lib/Images/3.jpg',
+                            ),
+                            ImageButtons(
+                              text: 'Whey Protein',
+                              imagetext: 'lib/Images/4.jpg',
+                            ),
+                          ]),
+                          Row(
+                            children: [
+                              ImageButtons(
+                                text: 'Probiotics',
+                                imagetext: 'lib/Images/5.jpg',
+                              ),
+                              ImageButtons(
+                                text: 'Baby food',
+                                imagetext: 'lib/Images/6.jpg',
+                              ),
+                              ImageButtons(
+                                text: 'Sexual Welness',
+                                imagetext: 'lib/Images/7.jpg',
+                              ),
+                              ImageButtons(
+                                text: 'Baby Diapers',
+                                imagetext: 'lib/Images/8.jpg',
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              ImageButtons(
+                                text: 'BP monitors',
+                                imagetext: 'lib/Images/9.jpg',
+                              ),
+                              ImageButtons(
+                                text: 'Moisturizers',
+                                imagetext: 'lib/Images/10.jpg',
+                              ),
+                              ImageButtons(
+                                text: 'Nebulizer',
+                                imagetext: 'lib/Images/11.jpg',
+                              ),
+                              ImageButtons(
+                                text: 'Collagen',
+                                imagetext: 'lib/Images/12.jpg',
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 16.0,
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Text(
+                            'Most Searched Items',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              ImageButtons(
+                                text: 'Collagen',
+                                imagetext: 'lib/Images/12.jpg',
+                              ),
+                              ImageButtons(
+                                text: 'BP monitors',
+                                imagetext: 'lib/Images/9.jpg',
+                              ),
+                              ImageButtons(
+                                text: 'Baby food',
+                                imagetext: 'lib/Images/6.jpg',
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              ImageButtons(
+                                text: 'Nebulizer',
+                                imagetext: 'lib/Images/11.jpg',
+                              ),
+                              ImageButtons(
+                                text: 'Baby Diapers',
+                                imagetext: 'lib/Images/8.jpg',
+                              ),
+                              ImageButtons(
+                                text: 'Whey Protein',
+                                imagetext: 'lib/Images/4.jpg',
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(
-                height: 16.0,
-              ),
-              // Column(
-              //   children: [
-              //     Text(
-              //       'OUR BEST SELLING ITEMS',
-              //       style: TextStyle(color: Colors.blueAccent),
-              //     ),
-              //   ],
-              // ),
-              Card(
-                child: Row(
-                  children: [
-                    NavigButtns(
-                      text: 'Home',
-                      icon: Icon(Icons.home),
-                    ),
-                    NavigButtns(
-                      text: 'Category',
-                      icon: Icon(Icons.category),
-                    ),
-                    NavigButtns(
-                      text: 'Upload',
-                      icon: Icon(Icons.upload_file),
-                    ),
-                    NavigButtns(
-                      text: 'Profile',
-                      icon: Icon(Icons.account_circle_rounded),
-                    ),
-                    NavigButtns(
-                      text: 'Cart',
-                      icon: Icon(Icons.shopping_cart),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
+            ),
+            FooterCard()
+          ],
         ),
       ),
     );
   }
 }
 
-class ImageButtons extends StatelessWidget {
-  ImageButtons(
-      {required this.text, required this.imagetext, required this.width});
-
-  String text;
-  String imagetext;
-  double width;
-  @override
-  Widget build(BuildContext context) {
-    return Flexible(
-      child: Container(
-        color: Color(0xffEFF3F8),
-        child: MaterialButton(
-          onPressed: () {},
-          child: Column(
-            children: [
-              Image.asset(
-                imagetext,
-                fit: BoxFit.fill,
-                width: 100.0,
-              ),
-              Text(
-                text,
-                style: TextStyle(
-                  color: Colors.blue,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class NavigButtns extends StatelessWidget {
-  NavigButtns({required this.icon, required this.text});
-  String text;
-  Icon icon;
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        children: [
-          Text(text),
-          IconButton(
-            onPressed: () {},
-            icon: icon,
-          ),
-        ],
-      ),
-    );
-  }
-}
