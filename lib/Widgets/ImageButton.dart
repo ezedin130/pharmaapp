@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable, prefer_const_constructors, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 class ImageButtons extends StatelessWidget {
   ImageButtons({required this.text, required this.imagetext});
