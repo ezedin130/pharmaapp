@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             ImageButtons(
                               text: 'Whey Protein',
-                              imagetext: 'lib/Images/4.jpg',
+                              imagetext: 'lib/Images/whey.jpg',
                             ),
                           ],
                         ),
@@ -181,7 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             ImageButtons(
                               text: 'Whey Protein',
-                              imagetext: 'lib/Images/4.jpg',
+                              imagetext: 'lib/Images/whey.jpg',
                             ),
                           ],
                         ),

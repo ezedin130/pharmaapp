@@ -2,9 +2,10 @@
 
 import 'package:flutter/material.dart';
 class NavigButtns extends StatelessWidget {
-  NavigButtns({required this.icon, required this.text});
+  NavigButtns({required this.icon, required this.text,required this.onp});
   String text;
   Icon icon;
+  Function() onp;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class NavigButtns extends StatelessWidget {
         children: [
           Text(text),
           IconButton(
-            onPressed: () {},
+            onPressed: onp,
             icon: icon,
           ),
         ],

@@ -17,7 +17,7 @@ class ImageButtons extends StatelessWidget {
             children: [
               Image.asset(
                 imagetext,
-                fit: BoxFit.fill,
+                fit: BoxFit.contain,
               ),
               Text(
                 text,
