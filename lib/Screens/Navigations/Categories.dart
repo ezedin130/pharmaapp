@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:pharma/Widgets/ImageButton.dart';
+import 'package:pharma/Products/HealthCare/BeautyCare/BeautyCare.dart';
+import 'package:pharma/Services/Lists.dart';
 
 class Categories extends StatefulWidget {
   static final id = 'Category';
@@ -11,6 +13,7 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
+ final lists = Lists();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,55 +32,49 @@ class _CategoriesState extends State<Categories> {
       body: Row(
         children: [
           Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+            flex: 1,
+            child: ListView(
+              //mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    ImageButtons(
-                      text: 'Beauty Care',
-                      imagetext: 'lib/Images/11.jpg',
-                    ),
-                    ImageButtons(
-                      text: 'Mom and Baby Care',
-                      imagetext: 'lib/Images/8.jpg',
-                    ),
-                    ImageButtons(
-                      text: 'Personal Care',
-                      imagetext: 'lib/Images/7.jpg',
-                    ),
-                  ],
+                ImageButtons(
+                  text: 'Beauty Care',
+                  imagetext: 'lib/Images/11.jpg',
                 ),
-                Row(
-                  children: [
-                    ImageButtons(
-                      text: 'Sports Care',
-                      imagetext: 'lib/Images/1.jpg',
-                    ),
-                    ImageButtons(
-                      text: 'Kids Meds',
-                      imagetext: 'lib/Images/8.jpg',
-                    ),
-                    ImageButtons(
-                      text: 'Prescribed Meds',
-                      imagetext: 'lib/Images/uppresc.png',
-                    ),
-                  ],
+                ImageButtons(
+                  text: 'Mom and Baby Care',
+                  imagetext: 'lib/Images/8.jpg',
                 ),
-                Row(
-                  children: [
-                    ImageButtons(
-                      text: 'Self Medications',
-                      imagetext: 'lib/Images/11.jpg',
-                    ),
-                  ],
+                ImageButtons(
+                  text: 'Personal Care',
+                  imagetext: 'lib/Images/7.jpg',
+                ),
+                ImageButtons(
+                  text: 'Sports Care',
+                  imagetext: 'lib/Images/1.jpg',
+                ),
+                ImageButtons(
+                  text: 'Kids Meds',
+                  imagetext: 'lib/Images/8.jpg',
+                ),
+                ImageButtons(
+                  text: 'Prescribed Meds',
+                  imagetext: 'lib/Images/uppresc.png',
+                ),
+                ImageButtons(
+                  text: 'Self Medications',
+                  imagetext: 'lib/Images/11.jpg',
                 )
               ],
             ),
           ),
-          // ListView(
-          //   children: [],
-          // )
+          Expanded(
+            flex: 3,
+            child: ListView(children: [
+              ImageButtons(text: lists.getName(0), imagetext: lists.getImagepath(0)),
+              ImageButtons(text: lists.getName(1), imagetext: lists.getImagepath(1)),
+              ImageButtons(text: lists.getName(2), imagetext: lists.getImagepath(2)),
+            ],),
+          )
         ],
       ),
     );

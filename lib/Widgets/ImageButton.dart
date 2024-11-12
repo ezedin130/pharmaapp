@@ -8,25 +8,23 @@ class ImageButtons extends StatelessWidget {
   String imagetext;
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: Container(
-        color: Color(0xffEFF3F8),
-        child: MaterialButton(
-          onPressed: () {},
-          child: Column(
-            children: [
-              Image.asset(
-                imagetext,
-                fit: BoxFit.contain,
+    return Container(
+      color: Color(0xffEFF3F8),
+      child: MaterialButton(
+        onPressed: () {},
+        child: Column(
+          children: [
+            Image.asset(
+              imagetext,
+              fit: BoxFit.contain,
+            ),
+            Text(
+              text,
+              style: TextStyle(
+                color: Colors.blue,
               ),
-              Text(
-                text,
-                style: TextStyle(
-                  color: Colors.blue,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
