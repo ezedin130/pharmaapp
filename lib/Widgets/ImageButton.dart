@@ -2,29 +2,31 @@
 
 import 'package:flutter/material.dart';
 class ImageButtons extends StatelessWidget {
-  ImageButtons({required this.text, required this.imagetext});
-
+  ImageButtons({required this.text, required this.imagetext,required this.onp});
+  Function() onp;
   String text;
   String imagetext;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Color(0xffEFF3F8),
-      child: MaterialButton(
-        onPressed: () {},
-        child: Column(
-          children: [
-            Image.asset(
-              imagetext,
-              fit: BoxFit.contain,
-            ),
-            Text(
-              text,
-              style: TextStyle(
-                color: Colors.blue,
+    return Flexible(
+      child: Container(
+        color: Color(0xffEFF3F8),
+        child: MaterialButton(
+          onPressed: () {},
+          child: Column(
+            children: [
+              Image.asset(
+                imagetext,
+                fit: BoxFit.contain,
               ),
-            ),
-          ],
+              Text(
+                text,
+                style: TextStyle(
+                  color: Colors.blue,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

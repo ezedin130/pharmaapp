@@ -4,18 +4,18 @@ class Lists {
   List beautycare = [
     BeautyCare(
       name: 'Day and Night Cream',
-      imagepath: 'lib/Images/BeautyCare/1.webp',
-      number: 1,
+      imagepath: 'lib/Images/3.jpg',
+      number: 100,
     ),
     BeautyCare(
       name: 'Facial Mask',
-      imagepath: 'lib/Images/BeautyCare/2.jpg',
-      number: 2,
+      imagepath: 'lib/Images/5.jpg',
+      number: 100,
     ),
     BeautyCare(
       name: 'Lip Care',
-      imagepath: 'lib/Images/BeautyCare/3.webp',
-      number: 3,
+      imagepath: 'lib/Images/8.jpg',
+      number: 100,
     ),
     //add more as needed
   ];
